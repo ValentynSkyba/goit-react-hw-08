@@ -1,11 +1,11 @@
-import Contact from "../Contact/Contact";
-import s from "./ConactList.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { selectFilter } from "../../redux/filtersSlice";
-import { selectIsError, selectIsLoading } from "../../redux/contactsSlice";
 import { useEffect } from "react";
-import { fetchContactsThunk } from "../../redux/contactsOps";
+import s from "./ConactList.module.css";
+import Contact from "../Contact/Contact";
 import { selectFilteredContacts } from "../../redux/selectors";
+import { selectFilter } from "../../redux/filter/slice";
+import { selectIsError, selectIsLoading } from "../../redux/contacts/slice";
+import { fetchContactsThunk } from "../../redux/contacts/operations";
 
 function ContactList() {
   const searchStr = useSelector(selectFilter);
