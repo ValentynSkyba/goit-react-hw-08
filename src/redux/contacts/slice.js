@@ -23,7 +23,7 @@ const sliceContacts = createSlice({
 
   extraReducers: (builder) => {
     builder
-      .addCase(logoutThunk.pending, (state) => {
+      .addCase(logoutThunk.fulfilled, (state) => {
         state.contacts = [];
       })
       .addCase(fetchContactsThunk.fulfilled, (state, { payload }) => {

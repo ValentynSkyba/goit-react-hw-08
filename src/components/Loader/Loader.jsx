@@ -1,12 +1,12 @@
 import { CirclesWithBar } from "react-loader-spinner";
+import s from "./Loader.module.css";
 
 function Loader() {
   return (
-    <div className="loader-box">
-      {" "}
+    <div className={s.loader}>
       <CirclesWithBar
-        height="100"
-        width="100"
+        height="60"
+        width="60"
         color="#4fa94d"
         outerCircleColor="#4fa94d"
         innerCircleColor="#4fa94d"
